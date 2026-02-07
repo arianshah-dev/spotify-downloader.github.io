@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpotDrop | Spotify Music Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="#">SpotDrop</a>
+        <nav class="links">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <button class="ghost-btn">Sign in</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <span class="pill">Fast • High Quality • Free</span>
+          <h1>Download Spotify tracks with a clean, modern workflow.</h1>
+          <p>
+            Paste a Spotify track, album, or playlist URL and download audio in seconds.
+            Built with responsive design so it looks beautiful on desktop, tablet, and mobile.
+          </p>
+
+          <form class="download-form" id="downloadForm">
+            <label class="visually-hidden" for="spotifyUrl">Spotify URL</label>
+            <input
+              id="spotifyUrl"
+              name="spotifyUrl"
+              type="url"
+              placeholder="https://open.spotify.com/track/..."
+              required
+            />
+            <select name="quality" aria-label="Audio quality">
+              <option value="320">MP3 • 320kbps</option>
+              <option value="192">MP3 • 192kbps</option>
+              <option value="128">MP3 • 128kbps</option>
+            </select>
+            <button type="submit">Download</button>
+          </form>
+
+          <p class="helper-text" id="statusText" aria-live="polite">
+            Tip: this is a UI demo. Hook this form to your backend download API.
+          </p>
+        </div>
+
+        <aside class="preview-card">
+          <p class="card-kicker">Now processing</p>
+          <h2>Blinding Lights</h2>
+          <p>The Weeknd • After Hours</p>
+          <div class="progress-wrap" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68">
+            <div class="progress"></div>
+          </div>
+          <div class="meta-row">
+            <span>68%</span>
+            <span>~9s left</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="features container" id="features">
+        <article class="feature">
+          <h3>Batch playlist support</h3>
+          <p>Download complete playlists with smart queueing and stable progress tracking.</p>
+        </article>
+        <article class="feature">
+          <h3>Metadata preserved</h3>
+          <p>Track title, artist, album art, and release data are embedded automatically.</p>
+        </article>
+        <article class="feature">
+          <h3>Mobile-first UX</h3>
+          <p>Designed from the ground up to feel smooth and intuitive on every screen size.</p>
+        </article>
+      </section>
+
+      <section class="how container" id="how-it-works">
+        <h2>How it works</h2>
+        <ol>
+          <li>Copy a Spotify URL from the app or web player.</li>
+          <li>Paste it above and pick your preferred quality.</li>
+          <li>Download your converted file instantly.</li>
+        </ol>
+      </section>
+
+      <section class="faq container" id="faq">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Is this responsive?</summary>
+          <p>Yes. The layout adapts from a two-column hero to a stacked mobile-first experience.</p>
+        </details>
+        <details>
+          <summary>Can I connect this to a backend?</summary>
+          <p>Absolutely. Submit the form URL and quality fields to your download endpoint.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 SpotDrop. Crafted for modern music workflows.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
